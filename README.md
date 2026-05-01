@@ -23,13 +23,15 @@ Designed to be an all-in-one solution for a wide array of robotics projects, it 
 
 ![OpenDualMotorDriver PCB](Images/PCB_3D_1.PNG)
 
-![OpenDualMotorDriver PCBFront](Images/IMG_2506.jpg)
+This project was originally created for the [Element14 Presents](https://www.youtube.com/@Element14presents) YouTube channel. 
 
-![OpenDualMotorDriver PCBBack](Images/IMG_2507.jpg)
+The video walkthrough is here: [Custom Dual Motor Driver — Element14 Presents](https://www.youtube.com/watch?v=DQ6VGJUASJw).
 
-This project was originally created for the [Element14 Presents](https://www.youtube.com/@Element14presents) YouTube channel. The video walkthrough is here: [Custom Dual Motor Driver — Element14 Presents](https://www.youtube.com/watch?v=DQ6VGJUASJw).
+Blog about the video on [Element14 Community Blog](https://community.element14.com/challenges-projects/element14-presents/project-videos/w/documents/72060/designing-a-more-capable-dual-motor-driver-beyond-the-l298n-what-worked-and-what-didn-t?ICID=I-HP-DESIGNING-A-MORE-CAPABLE-DUAL-MOTOR-APR26).
 
-## Features
+Google Sheet Link - BOM, Errata, and Requirement List: [Dual Motor Driver Sheet](https://docs.google.com/spreadsheets/d/1Zc9ybkn5q93EQncn_3QRWnhDOZEBM622GhTFV9P49-4/edit?usp=sharing)
+
+## Current Project Features
 
 - **Dual H-bridge** based on the DRV8412 in PWM mode (95% duty cap, 20 kHz switching).
 - **RP2350** dual-core MCU (Pico 2 module) running the firmware in the Arduino core.
@@ -41,6 +43,10 @@ This project was originally created for the [Element14 Presents](https://www.you
 - **Status RGB LED** driven by a PCA9633 with distinct idle, active, and fault patterns.
 - **Software-switched I²C pull-ups** on both buses for clean integration with sensor add-ons.
 - **Desktop GUI** (PySide6) with manual drive sliders, live oscilloscope-style plots, and a closed-loop tuning tab.
+
+![OpenDualMotorDriver GUI](Images/GUI_Screenshot.PNG)
+
+![OpenDualMotorDriver Setup](Images/IMG_2503.JPG)
 
 ## Repository structure
 
@@ -68,6 +74,10 @@ The board is a 4-layer PCB built around three logical sections:
 3. **Compute and IO** — a Raspberry Pi Pico 2 (RP2350) module, AS5600 magnetic encoder on I²C0, PCA9633 RGB status LED on I²C0, software-switched I²C0/I²C1 pull-ups, a UART header, an SPI header (routed but unused in firmware), and an I²C slave port.
 
 PCB renders, gerber files, the schematic PDF/PNG exports, and the bill of materials live under `Hardware/`. The BOM is provided as both `.xlsx` and `.csv`.
+
+![OpenDualMotorDriver PCB1](Images/IMG_2506.jpg)
+
+![OpenDualMotorDriver PCB2](Images/IMG_2507.jpg)
 
 ## Firmware
 
@@ -108,7 +118,6 @@ The full ASCII and binary command API — including `M-codes`, binary opcodes, s
 3. From *Tools → Board → Boards Manager*, install **Raspberry Pi Pico/RP2040/RP2350**.
 4. Open `Firmware/PicoDualMotorDriver/PicoDualMotorDriver.ino`.
 5. Select board **Raspberry Pi Pico 2** (or your equivalent RP2350 module).
-6. Plug in the board while holding `BOOTSEL`, then click **Upload**.
 
 The firmware prints a banner on USB and UART after boot. Send `M100` for help.
 
@@ -132,7 +141,7 @@ The GUI exposes manual-drive sliders, fault and OTW indicators, current and VIN 
 
 ## Quick start checklist
 
-1. Power the board from a 12–60 V supply rated for your motor stall current.
+1. Power the board from a 4-40 V supply rated for your motor stall current.
 2. Connect the brushed DC motor leads to the H0 and H1 outputs.
 3. Plug in the AS5600 magnet on the motor shaft (only required for closed-loop modes).
 4. Connect USB to your computer and launch the GUI, or open a serial terminal at 115200 baud.
