@@ -1,0 +1,32 @@
+CERN Open Hardware Licence Version 2 — Strongly Reciprocal (CERN-OHL-S v2)
+
+Copyright (c) 2026 Miloš Rašić
+
+The hardware design files in this repository — including schematics, PCB
+layouts, gerber files, the bill of materials, and any drawings or 3D models
+delivered for the purpose of fabricating this board — are licensed under the
+CERN Open Hardware Licence Version 2 — Strongly Reciprocal (CERN-OHL-S v2).
+
+The full text of this licence is available at:
+
+    https://ohwr.org/cern_ohl_s_v2.txt
+
+By making, modifying, conveying, or otherwise using these design files you
+accept and agree to be bound by the terms of CERN-OHL-S v2.
+
+In particular, CERN-OHL-S v2 requires that:
+
+  1. Any conveyed product, modification, or derivative of this design must be
+     made available under the same CERN-OHL-S v2 license, including the
+     complete corresponding source files needed to fabricate it.
+  2. Notices, copyright notices, and license texts shipped with this design
+     must be preserved in derivatives.
+  3. There is no warranty for the design — it is provided "AS IS".
+
+This license applies ONLY to the contents of the `Hardware/` directory and to
+any other files explicitly identified as design files. The firmware in
+`Firmware/` and the host software in `Software/` are licensed separately
+under the MIT license (see `LICENSE`).
+
+Where this short notice and the full CERN-OHL-S v2 text disagree, the full
+license text at the URL above prevails.

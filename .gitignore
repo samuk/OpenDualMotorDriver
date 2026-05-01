@@ -1,0 +1,54 @@
+# --------- Python ---------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --------- Arduino / PlatformIO ---------
+.pio/
+.vscode/
+*.elf
+*.uf2
+*.bin
+*.hex
+build/
+
+# --------- EDA / CAD junk ---------
+# Allow released gerber zips, ignore intermediate vendor outputs.
+*.bak
+*.tmp
+*.lck
+*.lck.*
+*-cache.lib
+fp-info-cache
+*.kicad_prl
+*.dsn
+*.ses
+*.net
+
+# --------- OS junk ---------
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# --------- Editor junk ---------
+.idea/
+*.swp
+*.swo
+*.bak
+.vscode/*
+!.vscode/extensions.json
+
+# --------- Large media (handle with releases or LFS, not git) ---------
+*.mov
+*.mp4
+*.MOV
+*.MP4
