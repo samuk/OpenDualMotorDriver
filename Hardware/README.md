@@ -52,7 +52,3 @@ A few practical pointers for first-time builders:
 - The board includes a footprint for an inline magnet directly above the AS5600. If you fit the encoder, place a diametrically magnetized magnet on the motor shaft so the field sweeps across the AS5600 die as the motor turns.
 - The two software-switched I²C pull-ups default to enabled. If you connect another bus master (or a sensor add-on with its own pull-ups), you can disable them in firmware via `M104`/`M260` or the `0x04` binary command.
 - Both UART and the I²C slave on `0x16` are wired to dedicated headers. They are not isolated, so plan your harness accordingly if the driver will sit at a different ground potential from the host.
-
-## License
-
-The hardware design files in this directory are licensed under the **CERN Open Hardware Licence Version 2 — Strongly Reciprocal (CERN-OHL-S v2)**. See [`../LICENSE-HARDWARE`](../LICENSE-HARDWARE) for the full notice.
