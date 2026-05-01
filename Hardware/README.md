@@ -9,7 +9,6 @@ Hardware/
 ├── Schematics/      Page-by-page schematic exports (PNG)
 ├── PCB-Renders/     Layer-by-layer board renders and 3D views (PNG)
 ├── Gerbers/         Manufacturer-ready gerber + drill files (zip)
-└── BOM/             Bill of materials (.xlsx and .csv)
 ```
 
 ## Schematic pages
@@ -39,10 +38,7 @@ Production-ready gerber + drill files are zipped under `Gerbers/`. They can be u
 
 ## Bill of materials
 
-The BOM is provided in two formats so you can pick the one that matches your distributor's importer:
-
-- `BOM/BOM.xlsx` — Excel spreadsheet, the primary source.
-- `BOM/BOM.csv` — flat CSV export of the same data.
+The BOM is provided on Google Sheet Link: [BOM](https://docs.google.com/spreadsheets/d/1Zc9ybkn5q93EQncn_3QRWnhDOZEBM622GhTFV9P49-4/edit?gid=0#gid=0)
 
 ## Assembly notes
 
