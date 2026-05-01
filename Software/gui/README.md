@@ -60,7 +60,3 @@ send_text(port, "M203 H0 S250")          # 25.0% manual drive
 ```
 
 (See the protocol module for the full set of helpers and the binary status-frame layout.)
-
-## License
-
-Released under the MIT license — see the top-level [`../../LICENSE`](../../LICENSE).
