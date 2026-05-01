@@ -6,13 +6,6 @@ This project was originally created for the [Element14 Presents](https://www.you
 
 ![OpenDualMotorDriver PCB](Images/PCB_3D_1.PNG)
 
-> **First-time setup.** This repository ships with the authored Markdown, license, and helper files only. Source code, schematics, gerbers, BOM, and PCB renders are pulled into this layout from the parent project folder by a single helper script:
->
-> - On Windows: right-click `setup_repo.ps1` → *Run with PowerShell* (or `pwsh -ExecutionPolicy Bypass -File .\setup_repo.ps1` from a terminal).
-> - On macOS / Linux: `bash setup_repo.sh`.
->
-> The script copies — never moves and never deletes — files from the parent folder, so your originals stay untouched. After it finishes, the folder is fully self-contained and ready to push to GitHub.
-
 ## Features
 
 - **Dual H-bridge** based on the DRV8412 in PWM mode (95% duty cap, 20 kHz switching).
@@ -123,15 +116,6 @@ The GUI exposes manual-drive sliders, fault and OTW indicators, current and VIN 
 4. Connect USB to your computer and launch the GUI, or open a serial terminal at 115200 baud.
 5. Send `M200 H0 S1` to enable bridge 0, then `M203 H0 S250` to drive at 25%.
 6. For position control, see the minimal sequences at the end of [`Firmware/API_REFERENCE.md`](Firmware/API_REFERENCE.md).
-
-## License
-
-This project is dual-licensed:
-
-- **Firmware and host software** (everything in `Firmware/` and `Software/`) are released under the MIT license — see [`LICENSE`](LICENSE).
-- **Hardware design files** (everything in `Hardware/`, including schematics, PCB layout, gerbers, and BOM) are released under the [CERN Open Hardware Licence Version 2 — Strongly Reciprocal](https://ohwr.org/cernohl) — see [`LICENSE-HARDWARE`](LICENSE-HARDWARE).
-
-If you build a derivative of the hardware, CERN-OHL-S v2 requires you to publish your modified design files under the same license. The MIT license on the firmware does not impose that requirement on derived code.
 
 ## Disclaimer
 
