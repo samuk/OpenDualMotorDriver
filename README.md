@@ -1,10 +1,33 @@
 # OpenDualMotorDriver
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Status](https://img.shields.io/badge/Status-Wokring_V1-orange)
+![Language-Python](https://img.shields.io/badge/Language-Python-blue)
+![Language-C++](https://img.shields.io/badge/Language-C++-blue)
 
-OpenDualMotorDriver is an open-source dual H-bridge brushed DC motor driver built around the Raspberry Pi RP2350 and the Texas Instruments DRV8412. It runs two motors at up to 70 V, monitors per-bridge current with ACS722 hall sensors, reads angle from an AS5600 magnetic encoder, and exposes a full ASCII + binary command API over USB, UART, and I²C. A desktop PySide6 GUI is included for live tuning, telemetry plotting, and closed-loop control.
+OpenDualMotorDriver is an open-source, compact (50x60 mm) dual H-bridge brushed DC motor driver built around the Raspberry Pi RP2350 and the Texas Instruments DRV8412. It runs two motors successfully from 4 V to 40 V (tested up to 31V), monitors per-bridge current with ACS722 hall sensors, reads angles from an AS5600 magnetic encoder, and exposes a full ASCII + binary command API over USB, UART, and I²C. A desktop PySide6 GUI is included for live tuning, telemetry plotting, and closed-loop PI/PID control of position and speed.
 
-This project was originally created for the [Element14 Presents](https://www.youtube.com/@Element14presents) YouTube channel. The video walkthrough is here: [Custom Dual Motor Driver — Element14 Presents](https://www.youtube.com/watch?v=DQ6VGJUASJw).
+## Specs
+![Platform](https://img.shields.io/badge/Platform-RP2350-red)
+![Motors](https://img.shields.io/badge/Motors-2-yellow)
+![Voltage](https://img.shields.io/badge/Input_Voltage-4V_to_40V-orange)
+![Current](https://img.shields.io/badge/Current_Per_Motor-3A_(6A_Peak)-purple)
+
+Designed to be an all-in-one solution for a wide array of robotics projects, it includes:
+1. Dual brushed DC motor driving capability (both outputs can be tied to a single bigger motor)
+2. Single power supply operation
+3. Wide voltage input range (4V - 40V)
+4. Current hall effect sensors for both motors
+5. Daisy chaining connectors for both power and I2C
+6. Small form factor (50x60 mm)
+7. Connectors for adding new sensors
 
 ![OpenDualMotorDriver PCB](Images/PCB_3D_1.PNG)
+
+![OpenDualMotorDriver PCBFront](Images/IMG_2506.jpg)
+
+![OpenDualMotorDriver PCBBack](Images/IMG_2507.jpg)
+
+This project was originally created for the [Element14 Presents](https://www.youtube.com/@Element14presents) YouTube channel. The video walkthrough is here: [Custom Dual Motor Driver — Element14 Presents](https://www.youtube.com/watch?v=DQ6VGJUASJw).
 
 ## Features
 
@@ -33,7 +56,6 @@ OpenDualMotorDriver/
 │   └── blog-post.md         # Long-form write-up of the build
 ├── Images/                  # Photos and 3D renders
 ├── LICENSE                  # MIT, applies to firmware and host software
-├── LICENSE-HARDWARE         # CERN-OHL-S v2, applies to schematics, PCB, BOM
 └── setup_repo.ps1 / .sh     # Helper that copies the source files into this layout
 ```
 
