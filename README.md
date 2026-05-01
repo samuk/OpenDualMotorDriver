@@ -3,6 +3,7 @@
 ![Status](https://img.shields.io/badge/Status-Wokring_V1-orange)
 ![Language-Python](https://img.shields.io/badge/Language-Python-blue)
 ![Language-C++](https://img.shields.io/badge/Language-C++-blue)
+![Version](https://img.shields.io/badge/Version-V1-purple)
 
 OpenDualMotorDriver is an open-source, compact (50x60 mm) dual H-bridge brushed DC motor driver built around the Raspberry Pi RP2350 and the Texas Instruments DRV8412. It runs two motors successfully from 4 V to 40 V (tested up to 31V), monitors per-bridge current with ACS722 hall sensors, reads angles from an AS5600 magnetic encoder, and exposes a full ASCII + binary command API over USB, UART, and I²C. A desktop PySide6 GUI is included for live tuning, telemetry plotting, and closed-loop PI/PID control of position and speed.
 
