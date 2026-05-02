@@ -74,11 +74,22 @@ The board is a 4-layer PCB built around three logical sections:
 2. **Sensing and protection** — two ACS722 hall current sensors in line with each H-bridge output, a divider feeding the VIN ADC, and the DRV8412 fault and OTW open-drain inputs pulled up to 3.3 V on the RP2350.
 3. **Compute and IO** — a Raspberry Pi Pico 2 (RP2350) module, AS5600 magnetic encoder on I²C0, PCA9633 RGB status LED on I²C0, software-switched I²C0/I²C1 pull-ups, a UART header, an SPI header (routed but unused in firmware), and an I²C slave port.
 
-PCB renders, gerber files, the schematic PDF/PNG exports, and the bill of materials live under `Hardware/`. The BOM is provided as both `.xlsx` and `.csv`.
+PCB renders, gerber files, the schematic PDF/PNG exports, and the bill of materials live under `Hardware/`. The BOM is provided as both `.xlsx` and `.csv`. In the Hardware directory, you will also find the PCB project file so you can do your own edits to it!
+
+### Schematics
+
+![OpenDualMotorDriver S1](Hardware/Schematics/1_PowerElectronics.PNG)
+
+![OpenDualMotorDriver S2](Hardware/Schematics/2_MotorDriver.PNG)
+
+![OpenDualMotorDriver S3](Hardware/Schematics/3_RP2350.PNG)
+
+### Finished PCB
 
 ![OpenDualMotorDriver PCB1](Images/IMG_2506.jpg)
 
 ![OpenDualMotorDriver PCB2](Images/IMG_2507.jpg)
+
 
 ## Firmware
 
