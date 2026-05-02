@@ -9,6 +9,7 @@ Hardware/
 ├── Schematics/      Page-by-page schematic exports (PNG)
 ├── PCB-Renders/     Layer-by-layer board renders and 3D views (PNG)
 ├── Gerbers/         Manufacturer-ready gerber + drill files (zip)
+├── PCB Project/     PCB Project File (epro)
 ```
 
 ## Schematic pages
